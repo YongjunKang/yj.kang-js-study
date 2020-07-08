@@ -1,8 +1,10 @@
+## 모던 자바스크립트(javascript) 개발을 위한 ES6 강의
+
 #### 섹션1 - Scope
 
 ##### 1. let
 ```js
-# var를 사용한 예시
+// var를 사용한 예시
 
 var name = "global var"; // 전역변수
 
@@ -23,7 +25,7 @@ ES6 전까지의 함수 단위의 스코프(function scope) 위주였다.
 함수 안에 지역변수를 먼저 잡고 지역변수가 없다면 전역 변수로 스코프체인을 따라 올라가서 `main` 값을 잡는다.
 
 ```js
-# let을 사용한 예시
+// let을 사용한 예시
 
 var name = "global var" // 전역변수
 
@@ -46,9 +48,9 @@ Closure 스코프가 생기면서 예상치 못한 동작들이 조금 생길 �
 
 아래 코드를 예로,
 ```html
-# Closure 예제
+<!-- Closure 예제 -->
 
-#HTML
+<!--HTML-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,7 +69,7 @@ Closure 스코프가 생기면서 예상치 못한 동작들이 조금 생길 �
 </html>
 ```
 ```js
-#JAVASCRIPT
+//JAVASCRIPT
 var list = document.querySelectorAll("li");
 
 for (var i=0; i<list.length; i++) {
@@ -102,7 +104,7 @@ li 태그를 클릭하면 해당 위치가 몇 번째 리스트 인지를 알려
 
 #### const - 선언된 변수 지키기
 ```js
-# var 사용시
+// var 사용시
 
 function home() {
     var homeName = 'my house';
@@ -121,7 +123,7 @@ function home() {
 예전은 표준적인 방법은 아니지만 `HOME_NAME` 대문자 표기법을 이용하여 "상수니까 건들거나 수정하면 안된다." 라고 네이밍 컨벤션을 통해서 표시했다.
 
 ```js
-# const 사용시
+// const 사용시
 
 function home() {
     const homeName = 'my house';
