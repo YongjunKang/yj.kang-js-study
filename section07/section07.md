@@ -45,7 +45,7 @@ Destructuring을 사용하면 변수에 배열이나 오브젝트에 필요한 �
 let obj = {
     name : "Kang",
     address : "korea",
-    age : 10
+    age : 26
 }
 
 let {name, age} = obj // name 과 age의 프로퍼티이름(key)을 기준으로 값을 뽑아온다.
