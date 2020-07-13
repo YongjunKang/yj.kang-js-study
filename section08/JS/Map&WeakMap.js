@@ -11,8 +11,8 @@ console.log(m2); // Map(2) {"a" => 1, "b" => 2}
 
 //map test3
 //Object는 String과 Symbol 타입만 키로 사용 가능하다.
-const obj1 = { a => a: 1 }; // Unexpected token =>
-const obj2 = { {}: 1 }; // Unexpected token {
+//const obj1 = { a => a: 1 }; // Unexpected token =>
+//const obj2 = { {}: 1 }; // Unexpected token {
 
 //Map은 String과 Symbol 이외의 타입을 키로 사용 가능하다.
 const m = new Map()
