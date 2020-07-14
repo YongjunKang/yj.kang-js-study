@@ -16,15 +16,11 @@ function getRandomNumber(maxNumber) {
     }    
 }
 
-for(let i = 0; i < count; i++) {
-    getRandomNumber(maxNumber);
-}
-
-function sort1(a, b) { // 한자리 숫자가 앞으로 오게
-    return a-b;
-}
+getRandomNumber(maxNumber);
 
 let newArray = Array.from(lottoSet);
-let sorting = newArray.sort(sort1);
+let sorting = newArray.sort((a,b) => {
+    return a-b;
+});
 
 console.log(sorting);
