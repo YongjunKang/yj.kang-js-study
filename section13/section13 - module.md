@@ -146,6 +146,7 @@ export default const test = {
     //...
 }
 ```
+`export default` 키워드로 지정된 단일 변수, 함수 또는 클래스 이며 Module당 하나의 Default 만 설정할 수 있다. `default` 키워드를 다중으로 사용하는 것은 구문 오류이다.
 
 `export default` 뒤에 `const`와 `let`을 함께 사용할 수 없다.
 그러므로,
@@ -158,3 +159,31 @@ const test = {
 export default test;
 ```
 따로 써주면 객체리터럴을 반환해서 사용할 수 있다.
+
+###### Module 추가정리
+1. Module의 최상위 레벨에있는 `this`의 값는 `undefined`이다.
+2. Module의 최상위 레벨에서 작성된 변수는 공유된 전역 범위에 자동으로 추가되지 않는다. => Module의 최상위 범위에만 존재한다.
+3. Module은 코드 내에서 HTML 스타일의 주석을 허용하지 않는다.
+4. Module 외부에서 사용할 수 있어야하는 모든 것을 export 해야한다.
+5. Module은 다른 Module에서 바인딩을 가져올 수 있다.
+
+```js
+// import 방식
+
+// 단일 바인딩 import
+import { sum } from "./example.js";
+console.log(sum(1, 2));
+
+// 여러 바인딩 import
+import { sum, multiply, magicNumber } from "./example.js";
+console.log(sum(1, magicNumber));
+console.log(multiply(1, 2));
+
+// Module에서 모두 import
+import * as example from "./example.js";
+console.log(example.sum(1,2));
+console.log(example.multiply(1, 2));
+
+export { sum as add }; // 외부로 알려진 이름을 add로 변경한다.
+import { sum as add }; // 받아온 sum의 이름을 add로 변경한다.
+```
